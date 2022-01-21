@@ -22,7 +22,7 @@ class Flashcard:
         def_list = [self.flashcards[term]["word_def"] for term in term_list]
 
         if answer != definition:
-            def_pos = def_list.index(definition)  # store the index for the definition
+            def_pos = def_list.index(definition)
             if answer in def_list:
                 pos = def_list.index(answer)
                 self.flashcards[term_list[def_pos]]["mistake"] += 1
